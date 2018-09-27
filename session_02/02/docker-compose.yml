@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  python:
+    image: 'python:3.7'
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    entrypoint: bash ./tools/start.sh
+    command: python3 ./src/main.py
+
